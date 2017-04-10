@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		791BE0CD6F92CD88C2A31123 /* libPods-CaptureTerritory.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C53FFC67F768DEE63A35438 /* libPods-CaptureTerritory.a */; };
 		976A0E9F1E9B89CB00FE7BB6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 976A0E9E1E9B89CB00FE7BB6 /* main.m */; };
 		976A0EA21E9B89CB00FE7BB6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 976A0EA11E9B89CB00FE7BB6 /* AppDelegate.m */; };
 		976A0EA51E9B89CB00FE7BB6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 976A0EA41E9B89CB00FE7BB6 /* ViewController.m */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C53FFC67F768DEE63A35438 /* libPods-CaptureTerritory.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CaptureTerritory.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		976A0E9A1E9B89CB00FE7BB6 /* CaptureTerritory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CaptureTerritory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		976A0E9E1E9B89CB00FE7BB6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		976A0EA01E9B89CB00FE7BB6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +28,8 @@
 		976A0EA91E9B89CB00FE7BB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		976A0EAC1E9B89CB00FE7BB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		976A0EAE1E9B89CB00FE7BB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7505E049C5554115B4922D0 /* Pods-CaptureTerritory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CaptureTerritory.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CaptureTerritory/Pods-CaptureTerritory.debug.xcconfig"; sourceTree = "<group>"; };
+		E8232620E60218972889B04B /* Pods-CaptureTerritory.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CaptureTerritory.release.xcconfig"; path = "Pods/Target Support Files/Pods-CaptureTerritory/Pods-CaptureTerritory.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				791BE0CD6F92CD88C2A31123 /* libPods-CaptureTerritory.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +49,8 @@
 			children = (
 				976A0E9C1E9B89CB00FE7BB6 /* CaptureTerritory */,
 				976A0E9B1E9B89CB00FE7BB6 /* Products */,
+				EF354C061D4128080CC7EDFE /* Pods */,
+				E279C0EBC44CEDBD64A6A3EF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +86,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		E279C0EBC44CEDBD64A6A3EF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4C53FFC67F768DEE63A35438 /* libPods-CaptureTerritory.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EF354C061D4128080CC7EDFE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D7505E049C5554115B4922D0 /* Pods-CaptureTerritory.debug.xcconfig */,
+				E8232620E60218972889B04B /* Pods-CaptureTerritory.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 976A0EB11E9B89CB00FE7BB6 /* Build configuration list for PBXNativeTarget "CaptureTerritory" */;
 			buildPhases = (
+				5B0BCAA98BEAC1E6ED323594 /* [CP] Check Pods Manifest.lock */,
 				976A0E961E9B89CB00FE7BB6 /* Sources */,
 				976A0E971E9B89CB00FE7BB6 /* Frameworks */,
 				976A0E981E9B89CB00FE7BB6 /* Resources */,
+				A75F41D09AC1CE8262BD61E3 /* [CP] Embed Pods Frameworks */,
+				6492CFB0FFC5D131B152E5C5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -144,6 +171,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5B0BCAA98BEAC1E6ED323594 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6492CFB0FFC5D131B152E5C5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CaptureTerritory/Pods-CaptureTerritory-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A75F41D09AC1CE8262BD61E3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CaptureTerritory/Pods-CaptureTerritory-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		976A0E961E9B89CB00FE7BB6 /* Sources */ = {
@@ -270,6 +345,7 @@
 		};
 		976A0EB21E9B89CB00FE7BB6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7505E049C5554115B4922D0 /* Pods-CaptureTerritory.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CaptureTerritory/Info.plist;
@@ -281,6 +357,7 @@
 		};
 		976A0EB31E9B89CB00FE7BB6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8232620E60218972889B04B /* Pods-CaptureTerritory.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CaptureTerritory/Info.plist;
@@ -309,6 +386,7 @@
 				976A0EB31E9B89CB00FE7BB6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
