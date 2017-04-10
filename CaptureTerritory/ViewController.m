@@ -42,8 +42,9 @@
 
 -(void) initLocationManager {
     self.locManager = [[CLLocationManager alloc]init];
-    self.locManager.distanceFilter = 20;
-    self.locManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters;
+    self.locManager.distanceFilter = 3;
+    self.locManager.activityType = CLActivityTypeFitness;
+    self.locManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation;
     self.locManager.delegate = self;
     [self.locManager requestAlwaysAuthorization];
 }
@@ -72,8 +73,13 @@
     [self changeLocation:location];
 }
 
-- (void)changeLocation:(CLLocation*)loc {
+- (void)changeLocation:(CLLocation*)location {
     
+    CGFloat widthPoint = [UIApplication sharedApplication].keyWindow.bounds.size.width;
+    CGFloat zoom = [GMSCameraPosition zoomAtCoordinate:location.coordinate forMeters:2000 perPoints:widthPoint];
+    self.mapView.camera = [[GMSCameraPosition alloc]initWithTarget:location.coordinate zoom:zoom bearing:0 viewingAngle:0];
+    
+    NSLog(@"changeLocation: %f, %f", location.coordinate.latitude, location.coordinate.longitude);
 }
 
 
