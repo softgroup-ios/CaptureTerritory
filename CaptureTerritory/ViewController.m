@@ -42,6 +42,36 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Drawing shapes
+
+- (void)drawPolyline:(GMSMutablePath*)userPath{
+    
+    if(userPath.count > 1){
+        CLLocationCoordinate2D lastCoord = [userPath coordinateAtIndex:userPath.count-1];
+        CLLocationCoordinate2D firstCoord = [userPath coordinateAtIndex:userPath.count-2];
+        GMSMutablePath *pathToDraw = [GMSMutablePath path];
+        [pathToDraw addCoordinate:firstCoord];
+        [pathToDraw addCoordinate:lastCoord];
+        GMSPolyline *way = [GMSPolyline polylineWithPath:pathToDraw];
+        way.map = _mapView;
+    }
+}
+
+- (void)drawPolygonForPath:(GMSMutablePath*)path{
+    
+    GMSPolygon *polygon = [GMSPolygon polygonWithPath:path];
+    polygon.fillColor = [UIColor colorWithRed:0.25 green:0 blue:0 alpha:0.5];
+    polygon.strokeColor = [UIColor blackColor];
+    polygon.strokeWidth = 2;
+    polygon.map = _mapView;
+}
+
+- (void)mapView:(GMSMapView *)mapView didTapAtCoordinate:(CLLocationCoordinate2D)coordinate{
+    
+    [_testUser.userPath addCoordinate:coordinate];
+    [self drawPolyline:_testUser.userPath];
+}
+
 #pragma mark - Work with CLLocationManager
 
 -(void) initLocationManager {
@@ -86,35 +116,7 @@
     NSLog(@"changeLocation: %f, %f", location.coordinate.latitude, location.coordinate.longitude);
 }
 
-#pragma mark - Drawing shapes
 
-- (void)drawPolyline:(GMSMutablePath*)userPath{
-
-    if(userPath.count > 1){
-        CLLocationCoordinate2D lastCoord = [userPath coordinateAtIndex:userPath.count-1];
-        CLLocationCoordinate2D firstCoord = [userPath coordinateAtIndex:userPath.count-2];
-        GMSMutablePath *pathToDraw = [GMSMutablePath path];
-        [pathToDraw addCoordinate:firstCoord];
-        [pathToDraw addCoordinate:lastCoord];
-        GMSPolyline *way = [GMSPolyline polylineWithPath:pathToDraw];
-        way.map = _mapView;
-    }
-}
-
-- (void)drawPolygonForPath:(GMSMutablePath*)path{
-
-    GMSPolygon *polygon = [GMSPolygon polygonWithPath:path];
-    polygon.fillColor = [UIColor colorWithRed:0.25 green:0 blue:0 alpha:0.5];
-    polygon.strokeColor = [UIColor blackColor];
-    polygon.strokeWidth = 2;
-    polygon.map = _mapView;
-}
-
-- (void)mapView:(GMSMapView *)mapView didTapAtCoordinate:(CLLocationCoordinate2D)coordinate{
-    
-    [_testUser.userPath addCoordinate:coordinate];
-    [self drawPolyline:_testUser.userPath];
-}
 
 
 @end
