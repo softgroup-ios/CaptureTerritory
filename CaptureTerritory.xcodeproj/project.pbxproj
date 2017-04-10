@@ -70,7 +70,7 @@
 		976A0E9C1E9B89CB00FE7BB6 /* CaptureTerritory */ = {
 			isa = PBXGroup;
 			children = (
-				9FF2A9091E9BBEE60067D68B /* Models */,
+				9FF2A9091E9BBEE60067D68B /* MaxModels */,
 				976A0EA01E9B89CB00FE7BB6 /* AppDelegate.h */,
 				976A0EA11E9B89CB00FE7BB6 /* AppDelegate.m */,
 				976A0EA31E9B89CB00FE7BB6 /* ViewController.h */,
@@ -93,13 +93,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		9FF2A9091E9BBEE60067D68B /* Models */ = {
+		9FF2A9091E9BBEE60067D68B /* MaxModels */ = {
 			isa = PBXGroup;
 			children = (
 				9FF2A90A1E9BBEF60067D68B /* UserModel.h */,
 				9FF2A90B1E9BBEF60067D68B /* UserModel.m */,
 			);
-			name = Models;
+			name = MaxModels;
 			sourceTree = "<group>";
 		};
 		E279C0EBC44CEDBD64A6A3EF /* Frameworks */ = {
