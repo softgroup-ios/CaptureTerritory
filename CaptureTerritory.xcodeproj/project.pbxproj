@@ -14,6 +14,7 @@
 		976A0EA81E9B89CB00FE7BB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 976A0EA61E9B89CB00FE7BB6 /* Main.storyboard */; };
 		976A0EAA1E9B89CB00FE7BB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 976A0EA91E9B89CB00FE7BB6 /* Assets.xcassets */; };
 		976A0EAD1E9B89CB00FE7BB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 976A0EAB1E9B89CB00FE7BB6 /* LaunchScreen.storyboard */; };
+		976A0EB51E9BA94B00FE7BB6 /* keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 976A0EB41E9BA94B00FE7BB6 /* keys.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		976A0EA91E9B89CB00FE7BB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		976A0EAC1E9B89CB00FE7BB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		976A0EAE1E9B89CB00FE7BB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		976A0EB41E9BA94B00FE7BB6 /* keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = keys.plist; sourceTree = "<group>"; };
 		D7505E049C5554115B4922D0 /* Pods-CaptureTerritory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CaptureTerritory.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CaptureTerritory/Pods-CaptureTerritory.debug.xcconfig"; sourceTree = "<group>"; };
 		E8232620E60218972889B04B /* Pods-CaptureTerritory.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CaptureTerritory.release.xcconfig"; path = "Pods/Target Support Files/Pods-CaptureTerritory/Pods-CaptureTerritory.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,6 +76,7 @@
 				976A0EAB1E9B89CB00FE7BB6 /* LaunchScreen.storyboard */,
 				976A0EAE1E9B89CB00FE7BB6 /* Info.plist */,
 				976A0E9D1E9B89CB00FE7BB6 /* Supporting Files */,
+				976A0EB41E9BA94B00FE7BB6 /* keys.plist */,
 			);
 			path = CaptureTerritory;
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				976A0EB51E9BA94B00FE7BB6 /* keys.plist in Resources */,
 				976A0EAD1E9B89CB00FE7BB6 /* LaunchScreen.storyboard in Resources */,
 				976A0EAA1E9B89CB00FE7BB6 /* Assets.xcassets in Resources */,
 				976A0EA81E9B89CB00FE7BB6 /* Main.storyboard in Resources */,
