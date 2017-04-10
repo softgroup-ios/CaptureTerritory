@@ -24,6 +24,7 @@
 @property (strong, nonatomic) NSMutableArray <PointLoc *>* points;
 @property (strong, nonatomic) CLLocationManager* locManager;
 @property (strong, nonatomic) CLLocation* location;
+@property (strong, nonatomic) CLLocation* previusLocation;
 
 @end
 
@@ -70,43 +71,59 @@
      didUpdateLocations:(NSArray<CLLocation *> *)locations {
     
     CLLocation *location = [locations lastObject];
-    self.location = location;
     
-    NSTimeInterval locationAge = -[location.timestamp timeIntervalSinceNow];
-    if (locationAge > 5.0) return;
+    if (![self checkLocationIfValid:location]) {
+        return;
+    }
     
-    if (location.horizontalAccuracy < 0) return;
-    
-    [self changeLocation:location];
+    [self changeLocationTo:location];
+    self.previusLocation = location;
 }
 
-- (void)changeLocation:(CLLocation*)location {
+- (BOOL)checkLocationIfValid:(CLLocation*)location {
+    NSTimeInterval locationAge = -[location.timestamp timeIntervalSinceNow];
+    if (locationAge > 5.0) return NO;
+    if (location.horizontalAccuracy < 0) return NO;
+    return YES;
+}
+
+- (void)changeLocationTo:(CLLocation*)location {
     
+    self.location = location;
     CGFloat widthPoint = [UIApplication sharedApplication].keyWindow.bounds.size.width;
     CGFloat zoom = [GMSCameraPosition zoomAtCoordinate:location.coordinate forMeters:2000 perPoints:widthPoint];
     self.mapView.camera = [[GMSCameraPosition alloc]initWithTarget:location.coordinate zoom:zoom bearing:0 viewingAngle:0];
     
-    NSLog(@"changeLocation: %f, %f", location.coordinate.latitude, location.coordinate.longitude);
-    
     PointLoc *point = [[PointLoc alloc]init];
     point.location = location;
-    point.time = [[NSDate date] timeIntervalSince1970];
+    [self addPoint:point];
+    
+    if ([self.previusLocation distanceFromLocation:location] < 100) {
+        
+    }
+
     [self addPoint:point];
     [self checkIfPath];
 }
 
 - (void)addPoint:(PointLoc*)point {
+    
     if (self.points.count > 1) {
         PointLoc *previousPoint = self.points.lastObject;
         CLLocationDistance distanceToPrevious = [point.location distanceFromLocation:previousPoint.location];
-        CLLocationSpeed speed = point.location.speed != -1 ? point.location.speed : distanceToPrevious/(point.time - previousPoint.time);
+        
+        CLLocation time = [point.location.timestamp timeIntervalSinceDate:previousPoint.location.timestamp];
+        CLLocationSpeed speed = point.location.speed != -1 ? point.location.speed : distanceToPrevious/(point.location.timestamp  );
         if (distanceToPrevious < 200 && speed < 40) {
             NSLog(@"add point");
             [self.points addObject:point];
         }
+        else {
+            
+            //create new path
+        }
     }
     else {
-        NSLog(@"add init point");
         [self.points addObject:point];
     }
 }

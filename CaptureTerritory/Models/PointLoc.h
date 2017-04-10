@@ -11,7 +11,6 @@
 
 @interface PointLoc : NSObject
 
-@property (assign, nonatomic) NSTimeInterval time;
 @property (strong, nonatomic) CLLocation *location;
 
 @end
