@@ -15,6 +15,7 @@
 		976A0EAA1E9B89CB00FE7BB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 976A0EA91E9B89CB00FE7BB6 /* Assets.xcassets */; };
 		976A0EAD1E9B89CB00FE7BB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 976A0EAB1E9B89CB00FE7BB6 /* LaunchScreen.storyboard */; };
 		976A0EB51E9BA94B00FE7BB6 /* keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 976A0EB41E9BA94B00FE7BB6 /* keys.plist */; };
+		9FF2A90C1E9BBEF60067D68B /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF2A90B1E9BBEF60067D68B /* UserModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,8 @@
 		976A0EAC1E9B89CB00FE7BB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		976A0EAE1E9B89CB00FE7BB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		976A0EB41E9BA94B00FE7BB6 /* keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = keys.plist; sourceTree = "<group>"; };
+		9FF2A90A1E9BBEF60067D68B /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
+		9FF2A90B1E9BBEF60067D68B /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
 		D7505E049C5554115B4922D0 /* Pods-CaptureTerritory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CaptureTerritory.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CaptureTerritory/Pods-CaptureTerritory.debug.xcconfig"; sourceTree = "<group>"; };
 		E8232620E60218972889B04B /* Pods-CaptureTerritory.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CaptureTerritory.release.xcconfig"; path = "Pods/Target Support Files/Pods-CaptureTerritory/Pods-CaptureTerritory.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,6 +70,7 @@
 		976A0E9C1E9B89CB00FE7BB6 /* CaptureTerritory */ = {
 			isa = PBXGroup;
 			children = (
+				9FF2A9091E9BBEE60067D68B /* Models */,
 				976A0EA01E9B89CB00FE7BB6 /* AppDelegate.h */,
 				976A0EA11E9B89CB00FE7BB6 /* AppDelegate.m */,
 				976A0EA31E9B89CB00FE7BB6 /* ViewController.h */,
@@ -87,6 +91,15 @@
 				976A0E9E1E9B89CB00FE7BB6 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9FF2A9091E9BBEE60067D68B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9FF2A90A1E9BBEF60067D68B /* UserModel.h */,
+				9FF2A90B1E9BBEF60067D68B /* UserModel.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		E279C0EBC44CEDBD64A6A3EF /* Frameworks */ = {
@@ -231,6 +244,7 @@
 			files = (
 				976A0EA51E9B89CB00FE7BB6 /* ViewController.m in Sources */,
 				976A0EA21E9B89CB00FE7BB6 /* AppDelegate.m in Sources */,
+				9FF2A90C1E9BBEF60067D68B /* UserModel.m in Sources */,
 				976A0E9F1E9B89CB00FE7BB6 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

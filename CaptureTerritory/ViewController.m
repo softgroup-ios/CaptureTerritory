@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "UserModel.h"
 
 @import GoogleMaps;
 @import GoogleMapsBase;
@@ -19,6 +20,8 @@
 @property (nonatomic,strong) CLLocationManager* locManager;
 @property (strong, nonatomic) CLLocation* location;
 
+@property (strong, nonatomic) UserModel *testUser;
+
 @end
 
 @implementation ViewController
@@ -26,6 +29,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    _testUser = [UserModel new];
     [self initLocationManager];
     self.mapView.delegate = self;
    // self.mapView.delegate = self;
@@ -80,6 +84,36 @@
     self.mapView.camera = [[GMSCameraPosition alloc]initWithTarget:location.coordinate zoom:zoom bearing:0 viewingAngle:0];
     
     NSLog(@"changeLocation: %f, %f", location.coordinate.latitude, location.coordinate.longitude);
+}
+
+#pragma mark - Drawing shapes
+
+- (void)drawPolyline:(GMSMutablePath*)userPath{
+
+    if(userPath.count > 1){
+        CLLocationCoordinate2D lastCoord = [userPath coordinateAtIndex:userPath.count-1];
+        CLLocationCoordinate2D firstCoord = [userPath coordinateAtIndex:userPath.count-2];
+        GMSMutablePath *pathToDraw = [GMSMutablePath path];
+        [pathToDraw addCoordinate:firstCoord];
+        [pathToDraw addCoordinate:lastCoord];
+        GMSPolyline *way = [GMSPolyline polylineWithPath:pathToDraw];
+        way.map = _mapView;
+    }
+}
+
+- (void)drawPolygonForPath:(GMSMutablePath*)path{
+
+    GMSPolygon *polygon = [GMSPolygon polygonWithPath:path];
+    polygon.fillColor = [UIColor colorWithRed:0.25 green:0 blue:0 alpha:0.5];
+    polygon.strokeColor = [UIColor blackColor];
+    polygon.strokeWidth = 2;
+    polygon.map = _mapView;
+}
+
+- (void)mapView:(GMSMapView *)mapView didTapAtCoordinate:(CLLocationCoordinate2D)coordinate{
+    
+    [_testUser.userPath addCoordinate:coordinate];
+    [self drawPolyline:_testUser.userPath];
 }
 
 
