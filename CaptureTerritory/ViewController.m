@@ -6,17 +6,23 @@
 //  Copyright © 2017 sxsasha. All rights reserved.
 //
 
-#import "ViewController.h"
-
 @import GoogleMaps;
 @import GoogleMapsBase;
 @import GoogleMapsCore;
+
+#import "ViewController.h"
+#import "PointLoc.h"
+
+
+
+
 
 @interface ViewController () <CLLocationManagerDelegate, GMSMapViewDelegate>
 
 @property (weak, nonatomic) IBOutlet GMSMapView *mapView;
 
-@property (nonatomic,strong) CLLocationManager* locManager;
+@property (strong, nonatomic) NSMutableArray <PointLoc *>* points;
+@property (strong, nonatomic) CLLocationManager* locManager;
 @property (strong, nonatomic) CLLocation* location;
 
 @end
@@ -27,6 +33,7 @@
     [super viewDidLoad];
     
     [self initLocationManager];
+    self.points = [NSMutableArray array];
     self.mapView.delegate = self;
    // self.mapView.delegate = self;
     // Do any additional setup after loading the view, typically from a nib.
@@ -80,7 +87,41 @@
     self.mapView.camera = [[GMSCameraPosition alloc]initWithTarget:location.coordinate zoom:zoom bearing:0 viewingAngle:0];
     
     NSLog(@"changeLocation: %f, %f", location.coordinate.latitude, location.coordinate.longitude);
+    
+    PointLoc *point = [[PointLoc alloc]init];
+    point.location = location;
+    point.time = [[NSDate date] timeIntervalSince1970];
+    [self addPoint:point];
+    [self checkIfPath];
 }
 
+- (void)addPoint:(PointLoc*)point {
+    if (self.points.count > 1) {
+        PointLoc *previousPoint = self.points.lastObject;
+        CLLocationDistance distanceToPrevious = [point.location distanceFromLocation:previousPoint.location];
+        CLLocationSpeed speed = point.location.speed != -1 ? point.location.speed : distanceToPrevious/(point.time - previousPoint.time);
+        if (distanceToPrevious < 200 && speed < 40) {
+            NSLog(@"add point");
+            [self.points addObject:point];
+        }
+    }
+    else {
+        NSLog(@"add init point");
+        [self.points addObject:point];
+    }
+}
+
+- (void)checkIfPath {
+    if (self.points.count > 10) {
+        PointLoc *lastPoint = self.points.lastObject;
+        for (int i = 0; i < self.points.count - 5; i++) {
+            PointLoc *point = self.points[i];
+            if ([point.location distanceFromLocation:lastPoint.location] < 100) {
+                NSLog(@"create path");
+                //create path from self.points[i] to lastPoint
+            }
+        }
+    }
+}
 
 @end

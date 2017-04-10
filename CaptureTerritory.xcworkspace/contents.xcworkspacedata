@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Debug/pathSimulate.gpx">
+   </FileRef>
+   <FileRef
       location = "group:CaptureTerritory.xcodeproj">
    </FileRef>
    <FileRef
