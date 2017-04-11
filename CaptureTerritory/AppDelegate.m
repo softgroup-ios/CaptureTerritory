@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "MainViewController.h"
 @import GoogleMaps;
 
 @interface AppDelegate ()
@@ -23,6 +24,22 @@
     NSString *path = [[NSBundle mainBundle] pathForResource: @"keys" ofType: @"plist"];
     NSString *googleKey =[[[NSDictionary alloc] initWithContentsOfFile:path] objectForKey:@"GoogleApiKey"];
     [GMSServices provideAPIKey:googleKey];
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UINavigationController *navigationController = [storyboard instantiateViewControllerWithIdentifier:@"NavigationController"];
+    [navigationController setViewControllers:@[[storyboard instantiateViewControllerWithIdentifier:@"ViewController"]]];
+    MainViewController *mainViewController = [storyboard instantiateInitialViewController];
+    mainViewController.rootViewController = navigationController;
+    [mainViewController setup];
+    
+    UIWindow *window = UIApplication.sharedApplication.delegate.window;
+    window.rootViewController = mainViewController;
+    
+    [UIView transitionWithView:window
+                      duration:0.3
+                       options:UIViewAnimationOptionTransitionCrossDissolve
+                    animations:nil
+                    completion:nil];
     
     return YES;
 }

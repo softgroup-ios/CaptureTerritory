@@ -15,6 +15,11 @@
 		976A0EAA1E9B89CB00FE7BB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 976A0EA91E9B89CB00FE7BB6 /* Assets.xcassets */; };
 		976A0EAD1E9B89CB00FE7BB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 976A0EAB1E9B89CB00FE7BB6 /* LaunchScreen.storyboard */; };
 		976A0EB51E9BA94B00FE7BB6 /* keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 976A0EB41E9BA94B00FE7BB6 /* keys.plist */; };
+		976A0EBA1E9BB67A00FE7BB6 /* PointLoc.m in Sources */ = {isa = PBXBuildFile; fileRef = 976A0EB91E9BB67A00FE7BB6 /* PointLoc.m */; };
+		9F461FC01E9CD93C00724F67 /* LeftViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F461FB31E9CD93C00724F67 /* LeftViewCell.m */; };
+		9F461FC11E9CD93C00724F67 /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F461FB51E9CD93C00724F67 /* LeftViewController.m */; };
+		9F461FC21E9CD93C00724F67 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F461FB81E9CD93C00724F67 /* MainViewController.m */; };
+		9F461FC31E9CD93C00724F67 /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F461FBB1E9CD93C00724F67 /* NavigationController.m */; };
 		9FF2A90C1E9BBEF60067D68B /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF2A90B1E9BBEF60067D68B /* UserModel.m */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +36,16 @@
 		976A0EAC1E9B89CB00FE7BB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		976A0EAE1E9B89CB00FE7BB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		976A0EB41E9BA94B00FE7BB6 /* keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = keys.plist; sourceTree = "<group>"; };
+		976A0EB81E9BB67A00FE7BB6 /* PointLoc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PointLoc.h; path = Models/PointLoc.h; sourceTree = "<group>"; };
+		976A0EB91E9BB67A00FE7BB6 /* PointLoc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PointLoc.m; path = Models/PointLoc.m; sourceTree = "<group>"; };
+		9F461FB21E9CD93C00724F67 /* LeftViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewCell.h; sourceTree = "<group>"; };
+		9F461FB31E9CD93C00724F67 /* LeftViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewCell.m; sourceTree = "<group>"; };
+		9F461FB41E9CD93C00724F67 /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
+		9F461FB51E9CD93C00724F67 /* LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
+		9F461FB71E9CD93C00724F67 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		9F461FB81E9CD93C00724F67 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		9F461FBA1E9CD93C00724F67 /* NavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationController.h; sourceTree = "<group>"; };
+		9F461FBB1E9CD93C00724F67 /* NavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationController.m; sourceTree = "<group>"; };
 		9FF2A90A1E9BBEF60067D68B /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
 		9FF2A90B1E9BBEF60067D68B /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
 		D7505E049C5554115B4922D0 /* Pods-CaptureTerritory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CaptureTerritory.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CaptureTerritory/Pods-CaptureTerritory.debug.xcconfig"; sourceTree = "<group>"; };
@@ -70,7 +85,8 @@
 		976A0E9C1E9B89CB00FE7BB6 /* CaptureTerritory */ = {
 			isa = PBXGroup;
 			children = (
-				9FF2A9091E9BBEE60067D68B /* MaxModels */,
+				9F461FB01E9CD93C00724F67 /* SideMenuConrollers */,
+				976A0EB71E9BB66500FE7BB6 /* Models */,
 				976A0EA01E9B89CB00FE7BB6 /* AppDelegate.h */,
 				976A0EA11E9B89CB00FE7BB6 /* AppDelegate.m */,
 				976A0EA31E9B89CB00FE7BB6 /* ViewController.h */,
@@ -93,13 +109,54 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		9FF2A9091E9BBEE60067D68B /* MaxModels */ = {
+		976A0EB71E9BB66500FE7BB6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				9FF2A90A1E9BBEF60067D68B /* UserModel.h */,
 				9FF2A90B1E9BBEF60067D68B /* UserModel.m */,
+				976A0EB81E9BB67A00FE7BB6 /* PointLoc.h */,
+				976A0EB91E9BB67A00FE7BB6 /* PointLoc.m */,
 			);
-			name = MaxModels;
+			name = Models;
+			sourceTree = "<group>";
+		};
+		9F461FB01E9CD93C00724F67 /* SideMenuConrollers */ = {
+			isa = PBXGroup;
+			children = (
+				9F461FB11E9CD93C00724F67 /* Left View Controller */,
+				9F461FB61E9CD93C00724F67 /* Right View Controller */,
+				9F461FB91E9CD93C00724F67 /* Root View Controllers */,
+			);
+			path = SideMenuConrollers;
+			sourceTree = "<group>";
+		};
+		9F461FB11E9CD93C00724F67 /* Left View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9F461FB21E9CD93C00724F67 /* LeftViewCell.h */,
+				9F461FB31E9CD93C00724F67 /* LeftViewCell.m */,
+				9F461FB41E9CD93C00724F67 /* LeftViewController.h */,
+				9F461FB51E9CD93C00724F67 /* LeftViewController.m */,
+			);
+			path = "Left View Controller";
+			sourceTree = "<group>";
+		};
+		9F461FB61E9CD93C00724F67 /* Right View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9F461FB71E9CD93C00724F67 /* MainViewController.h */,
+				9F461FB81E9CD93C00724F67 /* MainViewController.m */,
+			);
+			path = "Right View Controller";
+			sourceTree = "<group>";
+		};
+		9F461FB91E9CD93C00724F67 /* Root View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9F461FBA1E9CD93C00724F67 /* NavigationController.h */,
+				9F461FBB1E9CD93C00724F67 /* NavigationController.m */,
+			);
+			path = "Root View Controllers";
 			sourceTree = "<group>";
 		};
 		E279C0EBC44CEDBD64A6A3EF /* Frameworks */ = {
@@ -242,8 +299,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				976A0EBA1E9BB67A00FE7BB6 /* PointLoc.m in Sources */,
+				9F461FC01E9CD93C00724F67 /* LeftViewCell.m in Sources */,
 				976A0EA51E9B89CB00FE7BB6 /* ViewController.m in Sources */,
+				9F461FC31E9CD93C00724F67 /* NavigationController.m in Sources */,
+				9F461FC21E9CD93C00724F67 /* MainViewController.m in Sources */,
 				976A0EA21E9B89CB00FE7BB6 /* AppDelegate.m in Sources */,
+				9F461FC11E9CD93C00724F67 /* LeftViewController.m in Sources */,
 				9FF2A90C1E9BBEF60067D68B /* UserModel.m in Sources */,
 				976A0E9F1E9B89CB00FE7BB6 /* main.m in Sources */,
 			);

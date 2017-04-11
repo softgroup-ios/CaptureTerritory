@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "PointLoc.h"
 @import GoogleMaps;
 
 @interface UserModel : NSObject
@@ -19,8 +20,8 @@
 @property (strong, nonatomic) NSString *lastName;
 @property (strong, nonatomic) NSString *name;
 @property (nonatomic, strong) NSString *photo;
-
 @property (assign, nonatomic) NSInteger *score;
+
 @property (strong, nonatomic) GMSMutablePath *userPath;
 
 @end

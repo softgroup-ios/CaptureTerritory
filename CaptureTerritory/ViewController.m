@@ -8,16 +8,21 @@
 
 #import "ViewController.h"
 #import "UserModel.h"
+#import "ViewController.h"
+#import "PointLoc.h"
+
 
 @import GoogleMaps;
 @import GoogleMapsBase;
 @import GoogleMapsCore;
 
+
 @interface ViewController () <CLLocationManagerDelegate, GMSMapViewDelegate>
 
 @property (weak, nonatomic) IBOutlet GMSMapView *mapView;
 
-@property (nonatomic,strong) CLLocationManager* locManager;
+@property (strong, nonatomic) NSMutableArray <PointLoc *>* points;
+@property (strong, nonatomic) CLLocationManager* locManager;
 @property (strong, nonatomic) CLLocation* location;
 
 @property (strong, nonatomic) UserModel *testUser;
@@ -31,6 +36,7 @@
     
     _testUser = [UserModel new];
     [self initLocationManager];
+    self.points = [NSMutableArray array];
     self.mapView.delegate = self;
    // self.mapView.delegate = self;
     // Do any additional setup after loading the view, typically from a nib.
@@ -42,10 +48,25 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)showChooseController:(id)sender {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Choose" bundle:NSBundle.mainBundle];
+    
+    UINavigationController *navigationController = [storyboard instantiateInitialViewController];
+    
+    UIWindow *window = UIApplication.sharedApplication.delegate.window;
+    window.rootViewController = navigationController;
+    
+    [UIView transitionWithView:window
+                      duration:0.3
+                       options:UIViewAnimationOptionTransitionCrossDissolve
+                    animations:nil
+                    completion:nil];
+}
+
 #pragma mark - Drawing shapes
 
 - (void)drawPolyline:(GMSMutablePath*)userPath{
-    
+
     if(userPath.count > 1){
         CLLocationCoordinate2D lastCoord = [userPath coordinateAtIndex:userPath.count-1];
         CLLocationCoordinate2D firstCoord = [userPath coordinateAtIndex:userPath.count-2];
@@ -66,11 +87,6 @@
     polygon.map = _mapView;
 }
 
-- (void)mapView:(GMSMapView *)mapView didTapAtCoordinate:(CLLocationCoordinate2D)coordinate{
-    
-    [_testUser.userPath addCoordinate:coordinate];
-    [self drawPolyline:_testUser.userPath];
-}
 
 #pragma mark - Work with CLLocationManager
 
@@ -114,9 +130,45 @@
     self.mapView.camera = [[GMSCameraPosition alloc]initWithTarget:location.coordinate zoom:zoom bearing:0 viewingAngle:0];
     
     NSLog(@"changeLocation: %f, %f", location.coordinate.latitude, location.coordinate.longitude);
+    
+    PointLoc *point = [[PointLoc alloc]init];
+    point.location = location;
+    point.time = [[NSDate date] timeIntervalSince1970];
+    [self addPoint:point];
+    [self checkIfPath];
 }
 
 
 
+- (void)addPoint:(PointLoc*)point {
+    if (self.points.count > 1) {
+        PointLoc *previousPoint = self.points.lastObject;
+        CLLocationDistance distanceToPrevious = [point.location distanceFromLocation:previousPoint.location];
+        CLLocationSpeed speed = point.location.speed != -1 ? point.location.speed : distanceToPrevious/(point.time - previousPoint.time);
+        if (distanceToPrevious < 200 && speed < 40 && distanceToPrevious > 50) {
+            NSLog(@"add point");
+            [self.points addObject:point];
+            [_testUser.userPath addCoordinate:point.location.coordinate];
+            [self drawPolyline:_testUser.userPath];
+        }
+    }
+    else {
+        NSLog(@"add init point");
+        [self.points addObject:point];
+    }
+}
+
+- (void)checkIfPath {
+    if (self.points.count > 10) {
+        PointLoc *lastPoint = self.points.lastObject;
+        for (int i = 0; i < self.points.count - 5; i++) {
+            PointLoc *point = self.points[i];
+            if ([point.location distanceFromLocation:lastPoint.location] < 100) {
+                NSLog(@"create path");
+                //create path from self.points[i] to lastPoint
+            }
+        }
+    }
+}
 
 @end
