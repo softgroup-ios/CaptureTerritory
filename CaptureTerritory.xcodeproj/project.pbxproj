@@ -16,6 +16,7 @@
 		976A0EAD1E9B89CB00FE7BB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 976A0EAB1E9B89CB00FE7BB6 /* LaunchScreen.storyboard */; };
 		976A0EB51E9BA94B00FE7BB6 /* keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 976A0EB41E9BA94B00FE7BB6 /* keys.plist */; };
 		976A0EBA1E9BB67A00FE7BB6 /* PointLoc.m in Sources */ = {isa = PBXBuildFile; fileRef = 976A0EB91E9BB67A00FE7BB6 /* PointLoc.m */; };
+		9771EE101E9CBD4E00236B74 /* GeoPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 9771EE0F1E9CBD4E00236B74 /* GeoPath.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,8 @@
 		976A0EB41E9BA94B00FE7BB6 /* keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = keys.plist; sourceTree = "<group>"; };
 		976A0EB81E9BB67A00FE7BB6 /* PointLoc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PointLoc.h; path = Models/PointLoc.h; sourceTree = "<group>"; };
 		976A0EB91E9BB67A00FE7BB6 /* PointLoc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PointLoc.m; path = Models/PointLoc.m; sourceTree = "<group>"; };
+		9771EE0E1E9CBD4E00236B74 /* GeoPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoPath.h; sourceTree = "<group>"; };
+		9771EE0F1E9CBD4E00236B74 /* GeoPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoPath.m; sourceTree = "<group>"; };
 		D7505E049C5554115B4922D0 /* Pods-CaptureTerritory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CaptureTerritory.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CaptureTerritory/Pods-CaptureTerritory.debug.xcconfig"; sourceTree = "<group>"; };
 		E8232620E60218972889B04B /* Pods-CaptureTerritory.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CaptureTerritory.release.xcconfig"; path = "Pods/Target Support Files/Pods-CaptureTerritory/Pods-CaptureTerritory.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -98,6 +101,8 @@
 			children = (
 				976A0EB81E9BB67A00FE7BB6 /* PointLoc.h */,
 				976A0EB91E9BB67A00FE7BB6 /* PointLoc.m */,
+				9771EE0E1E9CBD4E00236B74 /* GeoPath.h */,
+				9771EE0F1E9CBD4E00236B74 /* GeoPath.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -246,6 +251,7 @@
 				976A0EA51E9B89CB00FE7BB6 /* ViewController.m in Sources */,
 				976A0EA21E9B89CB00FE7BB6 /* AppDelegate.m in Sources */,
 				976A0E9F1E9B89CB00FE7BB6 /* main.m in Sources */,
+				9771EE101E9CBD4E00236B74 /* GeoPath.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
