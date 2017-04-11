@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class GMSMutablePath;
+
 @interface ViewController : UIViewController
 
-
+- (void)drawPolyline:(GMSMutablePath*)userPath;
+- (void)drawPolygonForPath:(GMSMutablePath*)path;
 @end
 

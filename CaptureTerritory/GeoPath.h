@@ -14,4 +14,5 @@
 @interface GeoPath : NSObject
 @property (strong, nonatomic) NSMutableArray <PointLoc *> *points;
 @property (strong, nonatomic) NSDate *lastTimeUpdate;
+@property (assign, nonatomic) CLLocationDistance allDistance;
 @end

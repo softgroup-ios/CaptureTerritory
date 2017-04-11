@@ -12,5 +12,9 @@
 @interface PointLoc : NSObject
 
 @property (strong, nonatomic) CLLocation *location;
+@property (assign, nonatomic) NSTimeInterval timeToPrevious;
+@property (assign, nonatomic) CLLocationDistance distanceToPrevious;
 
+- (instancetype)init NS_UNAVAILABLE;
+- (instancetype)initWithLocation:(CLLocation *)location;
 @end

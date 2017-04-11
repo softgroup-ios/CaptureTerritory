@@ -16,12 +16,13 @@
 		976A0EAD1E9B89CB00FE7BB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 976A0EAB1E9B89CB00FE7BB6 /* LaunchScreen.storyboard */; };
 		976A0EB51E9BA94B00FE7BB6 /* keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 976A0EB41E9BA94B00FE7BB6 /* keys.plist */; };
 		976A0EBA1E9BB67A00FE7BB6 /* PointLoc.m in Sources */ = {isa = PBXBuildFile; fileRef = 976A0EB91E9BB67A00FE7BB6 /* PointLoc.m */; };
+		9771EE101E9CBD4E00236B74 /* GeoPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 9771EE0F1E9CBD4E00236B74 /* GeoPath.m */; };
+		9771EE141E9CF4D500236B74 /* TerritoryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9771EE131E9CF4D500236B74 /* TerritoryManager.m */; };
 		9F461FC01E9CD93C00724F67 /* LeftViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F461FB31E9CD93C00724F67 /* LeftViewCell.m */; };
 		9F461FC11E9CD93C00724F67 /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F461FB51E9CD93C00724F67 /* LeftViewController.m */; };
 		9F461FC21E9CD93C00724F67 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F461FB81E9CD93C00724F67 /* MainViewController.m */; };
 		9F461FC31E9CD93C00724F67 /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F461FBB1E9CD93C00724F67 /* NavigationController.m */; };
 		9FF2A90C1E9BBEF60067D68B /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF2A90B1E9BBEF60067D68B /* UserModel.m */; };
-		9771EE101E9CBD4E00236B74 /* GeoPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 9771EE0F1E9CBD4E00236B74 /* GeoPath.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,10 @@
 		976A0EB41E9BA94B00FE7BB6 /* keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = keys.plist; sourceTree = "<group>"; };
 		976A0EB81E9BB67A00FE7BB6 /* PointLoc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PointLoc.h; path = Models/PointLoc.h; sourceTree = "<group>"; };
 		976A0EB91E9BB67A00FE7BB6 /* PointLoc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PointLoc.m; path = Models/PointLoc.m; sourceTree = "<group>"; };
+		9771EE0E1E9CBD4E00236B74 /* GeoPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoPath.h; sourceTree = "<group>"; };
+		9771EE0F1E9CBD4E00236B74 /* GeoPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoPath.m; sourceTree = "<group>"; };
+		9771EE121E9CF4D500236B74 /* TerritoryManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TerritoryManager.h; path = Managers/TerritoryManager.h; sourceTree = "<group>"; };
+		9771EE131E9CF4D500236B74 /* TerritoryManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TerritoryManager.m; path = Managers/TerritoryManager.m; sourceTree = "<group>"; };
 		9F461FB21E9CD93C00724F67 /* LeftViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewCell.h; sourceTree = "<group>"; };
 		9F461FB31E9CD93C00724F67 /* LeftViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewCell.m; sourceTree = "<group>"; };
 		9F461FB41E9CD93C00724F67 /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
@@ -49,8 +54,6 @@
 		9F461FBB1E9CD93C00724F67 /* NavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationController.m; sourceTree = "<group>"; };
 		9FF2A90A1E9BBEF60067D68B /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
 		9FF2A90B1E9BBEF60067D68B /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
-		9771EE0E1E9CBD4E00236B74 /* GeoPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoPath.h; sourceTree = "<group>"; };
-		9771EE0F1E9CBD4E00236B74 /* GeoPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoPath.m; sourceTree = "<group>"; };
 		D7505E049C5554115B4922D0 /* Pods-CaptureTerritory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CaptureTerritory.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CaptureTerritory/Pods-CaptureTerritory.debug.xcconfig"; sourceTree = "<group>"; };
 		E8232620E60218972889B04B /* Pods-CaptureTerritory.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CaptureTerritory.release.xcconfig"; path = "Pods/Target Support Files/Pods-CaptureTerritory/Pods-CaptureTerritory.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,6 +91,7 @@
 		976A0E9C1E9B89CB00FE7BB6 /* CaptureTerritory */ = {
 			isa = PBXGroup;
 			children = (
+				9771EE111E9CF49F00236B74 /* Managers */,
 				9F461FB01E9CD93C00724F67 /* SideMenuConrollers */,
 				976A0EB71E9BB66500FE7BB6 /* Models */,
 				976A0EA01E9B89CB00FE7BB6 /* AppDelegate.h */,
@@ -123,6 +127,15 @@
 				9771EE0F1E9CBD4E00236B74 /* GeoPath.m */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		9771EE111E9CF49F00236B74 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				9771EE121E9CF4D500236B74 /* TerritoryManager.h */,
+				9771EE131E9CF4D500236B74 /* TerritoryManager.m */,
+			);
+			name = Managers;
 			sourceTree = "<group>";
 		};
 		9F461FB01E9CD93C00724F67 /* SideMenuConrollers */ = {
@@ -305,6 +318,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				976A0EBA1E9BB67A00FE7BB6 /* PointLoc.m in Sources */,
+				9771EE141E9CF4D500236B74 /* TerritoryManager.m in Sources */,
 				9F461FC01E9CD93C00724F67 /* LeftViewCell.m in Sources */,
 				976A0EA51E9B89CB00FE7BB6 /* ViewController.m in Sources */,
 				9F461FC31E9CD93C00724F67 /* NavigationController.m in Sources */,
