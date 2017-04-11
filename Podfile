@@ -8,5 +8,6 @@ target 'CaptureTerritory' do
   # Pods for CaptureTerritory
 pod 'AFNetworking'
 pod 'GoogleMaps'
+pod 'LGSideMenuController'
 
 end

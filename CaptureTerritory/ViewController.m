@@ -6,16 +6,16 @@
 //  Copyright © 2017 sxsasha. All rights reserved.
 //
 
-@import GoogleMaps;
-@import GoogleMapsBase;
-@import GoogleMapsCore;
-
+#import "ViewController.h"
+#import "UserModel.h"
 #import "ViewController.h"
 #import "PointLoc.h"
 #import "GeoPath.h"
 
 
-
+@import GoogleMaps;
+@import GoogleMapsBase;
+@import GoogleMapsCore;
 
 
 @interface ViewController () <CLLocationManagerDelegate, GMSMapViewDelegate>
@@ -28,6 +28,8 @@
 @property (strong, nonatomic) CLLocation* location;
 @property (strong, nonatomic) CLLocation* previusLocation;
 
+@property (strong, nonatomic) UserModel *testUser;
+
 @end
 
 @implementation ViewController
@@ -35,6 +37,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    _testUser = [UserModel new];
     [self initLocationManager];
     self.mapView.delegate = self;
 
@@ -48,6 +51,46 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (IBAction)showChooseController:(id)sender {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Choose" bundle:NSBundle.mainBundle];
+    
+    UINavigationController *navigationController = [storyboard instantiateInitialViewController];
+    
+    UIWindow *window = UIApplication.sharedApplication.delegate.window;
+    window.rootViewController = navigationController;
+    
+    [UIView transitionWithView:window
+                      duration:0.3
+                       options:UIViewAnimationOptionTransitionCrossDissolve
+                    animations:nil
+                    completion:nil];
+}
+
+#pragma mark - Drawing shapes
+
+- (void)drawPolyline:(GMSMutablePath*)userPath{
+
+    if(userPath.count > 1){
+        CLLocationCoordinate2D lastCoord = [userPath coordinateAtIndex:userPath.count-1];
+        CLLocationCoordinate2D firstCoord = [userPath coordinateAtIndex:userPath.count-2];
+        GMSMutablePath *pathToDraw = [GMSMutablePath path];
+        [pathToDraw addCoordinate:firstCoord];
+        [pathToDraw addCoordinate:lastCoord];
+        GMSPolyline *way = [GMSPolyline polylineWithPath:pathToDraw];
+        way.map = _mapView;
+    }
+}
+
+- (void)drawPolygonForPath:(GMSMutablePath*)path{
+    
+    GMSPolygon *polygon = [GMSPolygon polygonWithPath:path];
+    polygon.fillColor = [UIColor colorWithRed:0.25 green:0 blue:0 alpha:0.5];
+    polygon.strokeColor = [UIColor blackColor];
+    polygon.strokeWidth = 2;
+    polygon.map = _mapView;
+}
+
 
 #pragma mark - Work with CLLocationManager
 
