@@ -124,7 +124,7 @@
     GMSPath *path = [self fromCLLocationArray:location];
 
     [self.drawDelegate drawPolygonForPath:path];
-    GMSGeometryContainsLocation(<#CLLocationCoordinate2D point#>, <#GMSPath * _Nonnull path#>, NO)
+  //  GMSGeometryContainsLocation(<#CLLocationCoordinate2D point#>, <#GMSPath * _Nonnull path#>, NO)
     //GMSGeometryIsLocationOnPathTolerance
     //[self.currentPath.points removeObjectsInRange:NSMakeRange(offset, count - offset)];
 }

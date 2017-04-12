@@ -18,6 +18,8 @@
 		976A0EBA1E9BB67A00FE7BB6 /* PointLoc.m in Sources */ = {isa = PBXBuildFile; fileRef = 976A0EB91E9BB67A00FE7BB6 /* PointLoc.m */; };
 		9771EE101E9CBD4E00236B74 /* GeoPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 9771EE0F1E9CBD4E00236B74 /* GeoPath.m */; };
 		9771EE141E9CF4D500236B74 /* TerritoryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9771EE131E9CF4D500236B74 /* TerritoryManager.m */; };
+		97769E9D1E9E1004006B2FF4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97769E9C1E9E1004006B2FF4 /* MapKit.framework */; };
+		97769E9F1E9E3ED7006B2FF4 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97769E9E1E9E3ED7006B2FF4 /* CoreData.framework */; };
 		9F461FC01E9CD93C00724F67 /* LeftViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F461FB31E9CD93C00724F67 /* LeftViewCell.m */; };
 		9F461FC11E9CD93C00724F67 /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F461FB51E9CD93C00724F67 /* LeftViewController.m */; };
 		9F461FC21E9CD93C00724F67 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F461FB81E9CD93C00724F67 /* MainViewController.m */; };
@@ -44,6 +46,8 @@
 		9771EE0F1E9CBD4E00236B74 /* GeoPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoPath.m; sourceTree = "<group>"; };
 		9771EE121E9CF4D500236B74 /* TerritoryManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TerritoryManager.h; path = Managers/TerritoryManager.h; sourceTree = "<group>"; };
 		9771EE131E9CF4D500236B74 /* TerritoryManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TerritoryManager.m; path = Managers/TerritoryManager.m; sourceTree = "<group>"; };
+		97769E9C1E9E1004006B2FF4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		97769E9E1E9E3ED7006B2FF4 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		9F461FB21E9CD93C00724F67 /* LeftViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewCell.h; sourceTree = "<group>"; };
 		9F461FB31E9CD93C00724F67 /* LeftViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewCell.m; sourceTree = "<group>"; };
 		9F461FB41E9CD93C00724F67 /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
@@ -63,6 +67,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97769E9F1E9E3ED7006B2FF4 /* CoreData.framework in Frameworks */,
+				97769E9D1E9E1004006B2FF4 /* MapKit.framework in Frameworks */,
 				791BE0CD6F92CD88C2A31123 /* libPods-CaptureTerritory.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -180,6 +186,8 @@
 		E279C0EBC44CEDBD64A6A3EF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				97769E9E1E9E3ED7006B2FF4 /* CoreData.framework */,
+				97769E9C1E9E1004006B2FF4 /* MapKit.framework */,
 				4C53FFC67F768DEE63A35438 /* libPods-CaptureTerritory.a */,
 			);
 			name = Frameworks;

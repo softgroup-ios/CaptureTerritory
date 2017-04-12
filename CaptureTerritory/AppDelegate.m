@@ -10,7 +10,15 @@
 #import "MainViewController.h"
 @import GoogleMaps;
 
+
+#import <MapKit/MapKit.h>
+#import <CoreData/CoreData.h>
+
+#import <string.h>
+
 @interface AppDelegate ()
+
+@property (strong, nonatomic) dispatch_source_t timer;
 
 @end
 
@@ -19,6 +27,124 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+//    CLLocationCoordinate2D *coordinates = malloc(sizeof(CLLocationCoordinate2D) * 20);
+//    CLLocationCoordinate2D coordinates[20];
+//    NSLog(@"sizeOf: %ld", strlen(coordinates));
+//    
+//    *(coordinates+10) = CLLocationCoordinate2DMake(13, 14);
+//    NSLog(@"coordinate: %f, %f", ((CLLocationCoordinate2D)*(coordinates+10)).latitude, ((CLLocationCoordinate2D)*(coordinates+10)).longitude);
+//    
+//    MKMapView *map;
+//    MKPolyline *polyLine;
+//    [map addOverlay:polyLine];
+//    [map addAnnotation:polyLine];
+//    MKAnnotationView *annotation;
+//    [map setDelegate:self];
+//    
+//    
+//    NSLog(@"size char:%d, short:%d, int:%d, long:%lu, long long:%d", sizeof(char), sizeof(short), sizeof(int), sizeof(long), sizeof(int64_t));
+
+//    char *string = "Sasha";
+//
+////    u_long length = strlen(string);
+////    char* revertString = malloc(sizeof(char) * length);
+////    u_long number = 0;
+////    for (u_long i = length; i > 0; --i) {
+////        *(revertString+number) = *(string+i);
+////        number++;
+////    }
+//    
+//    reversed_string(string);
+//    NSLog(@"revertString: %s", string);
+    
+    
+    
+//    // revert in Objective-C
+//    NSString *string = @"Sasha";
+//    
+//    NSMutableString *reverted = [NSMutableString string];
+//    for (NSInteger i = string.length-1; i >= 0; --i) {
+//        [reverted appendString:[string substringWithRange:NSMakeRange(i, 1)]];
+//    }
+//    NSLog(@"revertString: %@", reverted);
+    
+    
+//    //revert
+//    char *string = "Sasha";
+//    
+//    u_long length = strlen(string);
+//    char *reverted = malloc(sizeof(char)*length);
+//    
+//    u_long i = length - 1;
+//    for(int j = 0; j < length; ++j) {
+//        reverted[j] = string[i];
+//        --i;
+//    }
+//    NSLog(@"string: %s", string);
+//    NSLog(@"reverted: %s", reverted);
+//    
+//    
+//    
+//    //postfix prefix
+//    int a = 100;
+//    
+//    int b = a++;
+//    int c = ++a;
+    
+    
+
+//    //semaphore
+//    dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
+//    dispatch_async(dispatch_queue_create("ua.com.Selecto.AppDelegate.test", DISPATCH_QUEUE_SERIAL), ^{
+//        [NSThread sleepForTimeInterval:10];
+//        dispatch_semaphore_signal(semaphore);
+//    });
+//    
+//    dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+
+    //sync
+//    dispatch_sync(dispatch_queue_create("ua.com.Selecto.AppDelegate.test", DISPATCH_QUEUE_SERIAL), ^{
+//        [NSThread sleepForTimeInterval:10];
+//    });
+//    NSLog(@"priority: %@", [NSThread currentThread].threadDictionary);
+    
+    
+    //source
+//    dispatch_queue_t queue = dispatch_queue_create("com.blah",0);
+//    _timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue);
+//    dispatch_source_set_timer(_timer, DISPATCH_TIME_NOW, 3 * NSEC_PER_SEC, 2 * NSEC_PER_SEC);
+//    dispatch_source_set_event_handler(_timer, ^{
+//        NSLog(@"priority: %d", [NSThread isMainThread]);
+//    });
+//    dispatch_resume(_timer);
+    
+    
+    
+    //nsperation
+    
+//    NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+//    queue.maxConcurrentOperationCount = 3;
+    
+    NSBlockOperation *blockOpA = [NSBlockOperation blockOperationWithBlock:^{
+        NSLog(@"blockOpA isMainThread: %d", [NSThread isMainThread]);
+    }];
+    
+    NSBlockOperation *blockOpB = [NSBlockOperation blockOperationWithBlock:^{
+        NSLog(@"blockOpB isMainThread: %d", [NSThread isMainThread]);
+        [NSThread sleepForTimeInterval:10];
+    }];
+    //[queue addOperation:blockOp];
+    
+    [blockOpB start];
+    [blockOpA addDependency:blockOpB];
+    [blockOpA start];
+    
+    
+    
+    
+    
+    
     
     //init GMS SDK with key
     NSString *path = [[NSBundle mainBundle] pathForResource: @"keys" ofType: @"plist"];
@@ -43,7 +169,6 @@
     
     return YES;
 }
-
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
