@@ -12,16 +12,15 @@
 
 @interface UserModel : NSObject
 
-@property (nonatomic, strong) NSString *email;
-@property (nonatomic, strong) NSString *pass;
-@property (nonatomic, strong) NSString *uid;
-
-@property (strong, nonatomic) NSString *nickName;
+@property (strong, nonatomic) NSString *id;
 @property (strong, nonatomic) NSString *lastName;
 @property (strong, nonatomic) NSString *name;
 @property (nonatomic, strong) NSString *photo;
 @property (assign, nonatomic) NSInteger *score;
+@property (assign, nonatomic) double *distance;
 
 @property (strong, nonatomic) GMSMutablePath *userPath;
+
+@property (strong, nonatomic) NSMutableDictionary *socialNetworks;
 
 @end

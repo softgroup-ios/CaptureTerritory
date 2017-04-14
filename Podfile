@@ -8,6 +8,9 @@ target 'CaptureTerritory' do
   # Pods for CaptureTerritory
 pod 'AFNetworking'
 pod 'GoogleMaps'
-pod 'LGSideMenuController'
+pod "VK-ios-sdk"
+pod 'Firebase/Core'
+pod 'Firebase/Auth'
+pod 'Google/SignIn'
 
 end

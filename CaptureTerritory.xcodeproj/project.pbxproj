@@ -16,12 +16,17 @@
 		976A0EAD1E9B89CB00FE7BB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 976A0EAB1E9B89CB00FE7BB6 /* LaunchScreen.storyboard */; };
 		976A0EB51E9BA94B00FE7BB6 /* keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 976A0EB41E9BA94B00FE7BB6 /* keys.plist */; };
 		976A0EBA1E9BB67A00FE7BB6 /* PointLoc.m in Sources */ = {isa = PBXBuildFile; fileRef = 976A0EB91E9BB67A00FE7BB6 /* PointLoc.m */; };
-		9F461FC01E9CD93C00724F67 /* LeftViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F461FB31E9CD93C00724F67 /* LeftViewCell.m */; };
-		9F461FC11E9CD93C00724F67 /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F461FB51E9CD93C00724F67 /* LeftViewController.m */; };
-		9F461FC21E9CD93C00724F67 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F461FB81E9CD93C00724F67 /* MainViewController.m */; };
-		9F461FC31E9CD93C00724F67 /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F461FBB1E9CD93C00724F67 /* NavigationController.m */; };
-		9FF2A90C1E9BBEF60067D68B /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF2A90B1E9BBEF60067D68B /* UserModel.m */; };
 		9771EE101E9CBD4E00236B74 /* GeoPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 9771EE0F1E9CBD4E00236B74 /* GeoPath.m */; };
+		9F461FD11E9CF74C00724F67 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F461FD01E9CF74C00724F67 /* LoginViewController.m */; };
+		9F461FD51E9D2DF900724F67 /* VKManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F461FD41E9D2DF900724F67 /* VKManager.m */; };
+		9F5300921E9FB58800D6AE17 /* GPManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F5300911E9FB58800D6AE17 /* GPManager.m */; };
+		9FC3F3571E9FCCAA0036C62F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9FC3F3561E9FCCAA0036C62F /* GoogleService-Info.plist */; };
+		9FC4C33F1E9E63C00051C221 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC4C33E1E9E63C00051C221 /* ProfileViewController.m */; };
+		9FC4C3431E9E685A0051C221 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC4C3421E9E685A0051C221 /* SWRevealViewController.m */; };
+		9FC4C3461E9E6F9A0051C221 /* LeftSideTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC4C3451E9E6F9A0051C221 /* LeftSideTableViewController.m */; };
+		9FC4C34A1E9E72940051C221 /* LeftViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC4C3491E9E72940051C221 /* LeftViewCell.m */; };
+		9FC4C34D1E9E87070051C221 /* MainLeftViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC4C34C1E9E87070051C221 /* MainLeftViewCell.m */; };
+		9FF2A90C1E9BBEF60067D68B /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF2A90B1E9BBEF60067D68B /* UserModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +35,8 @@
 		976A0E9E1E9B89CB00FE7BB6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		976A0EA01E9B89CB00FE7BB6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		976A0EA11E9B89CB00FE7BB6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		976A0EA31E9B89CB00FE7BB6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		976A0EA41E9B89CB00FE7BB6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		976A0EA31E9B89CB00FE7BB6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ../ViewController.h; sourceTree = "<group>"; };
+		976A0EA41E9B89CB00FE7BB6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = ../ViewController.m; sourceTree = "<group>"; };
 		976A0EA71E9B89CB00FE7BB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		976A0EA91E9B89CB00FE7BB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		976A0EAC1E9B89CB00FE7BB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -39,18 +44,28 @@
 		976A0EB41E9BA94B00FE7BB6 /* keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = keys.plist; sourceTree = "<group>"; };
 		976A0EB81E9BB67A00FE7BB6 /* PointLoc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PointLoc.h; path = Models/PointLoc.h; sourceTree = "<group>"; };
 		976A0EB91E9BB67A00FE7BB6 /* PointLoc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PointLoc.m; path = Models/PointLoc.m; sourceTree = "<group>"; };
-		9F461FB21E9CD93C00724F67 /* LeftViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewCell.h; sourceTree = "<group>"; };
-		9F461FB31E9CD93C00724F67 /* LeftViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewCell.m; sourceTree = "<group>"; };
-		9F461FB41E9CD93C00724F67 /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
-		9F461FB51E9CD93C00724F67 /* LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
-		9F461FB71E9CD93C00724F67 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		9F461FB81E9CD93C00724F67 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
-		9F461FBA1E9CD93C00724F67 /* NavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationController.h; sourceTree = "<group>"; };
-		9F461FBB1E9CD93C00724F67 /* NavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationController.m; sourceTree = "<group>"; };
-		9FF2A90A1E9BBEF60067D68B /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
-		9FF2A90B1E9BBEF60067D68B /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
 		9771EE0E1E9CBD4E00236B74 /* GeoPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoPath.h; sourceTree = "<group>"; };
 		9771EE0F1E9CBD4E00236B74 /* GeoPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoPath.m; sourceTree = "<group>"; };
+		9F461FC61E9CF11900724F67 /* constant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = constant.h; path = ../constant.h; sourceTree = "<group>"; };
+		9F461FCF1E9CF74C00724F67 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		9F461FD01E9CF74C00724F67 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		9F461FD31E9D2DF900724F67 /* VKManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKManager.h; sourceTree = "<group>"; };
+		9F461FD41E9D2DF900724F67 /* VKManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKManager.m; sourceTree = "<group>"; };
+		9F5300901E9FB58800D6AE17 /* GPManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPManager.h; sourceTree = "<group>"; };
+		9F5300911E9FB58800D6AE17 /* GPManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPManager.m; sourceTree = "<group>"; };
+		9FC3F3561E9FCCAA0036C62F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9FC4C33D1E9E63C00051C221 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileViewController.h; path = CaptureTerritory/ProfileViewController.h; sourceTree = SOURCE_ROOT; };
+		9FC4C33E1E9E63C00051C221 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileViewController.m; path = CaptureTerritory/ProfileViewController.m; sourceTree = SOURCE_ROOT; };
+		9FC4C3411E9E685A0051C221 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		9FC4C3421E9E685A0051C221 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		9FC4C3441E9E6F9A0051C221 /* LeftSideTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LeftSideTableViewController.h; path = CaptureTerritory/LeftSideTableViewController.h; sourceTree = SOURCE_ROOT; };
+		9FC4C3451E9E6F9A0051C221 /* LeftSideTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LeftSideTableViewController.m; path = CaptureTerritory/LeftSideTableViewController.m; sourceTree = SOURCE_ROOT; };
+		9FC4C3481E9E72940051C221 /* LeftViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewCell.h; sourceTree = "<group>"; };
+		9FC4C3491E9E72940051C221 /* LeftViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewCell.m; sourceTree = "<group>"; };
+		9FC4C34B1E9E87070051C221 /* MainLeftViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainLeftViewCell.h; sourceTree = "<group>"; };
+		9FC4C34C1E9E87070051C221 /* MainLeftViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainLeftViewCell.m; sourceTree = "<group>"; };
+		9FF2A90A1E9BBEF60067D68B /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
+		9FF2A90B1E9BBEF60067D68B /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
 		D7505E049C5554115B4922D0 /* Pods-CaptureTerritory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CaptureTerritory.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CaptureTerritory/Pods-CaptureTerritory.debug.xcconfig"; sourceTree = "<group>"; };
 		E8232620E60218972889B04B /* Pods-CaptureTerritory.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CaptureTerritory.release.xcconfig"; path = "Pods/Target Support Files/Pods-CaptureTerritory/Pods-CaptureTerritory.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,18 +103,19 @@
 		976A0E9C1E9B89CB00FE7BB6 /* CaptureTerritory */ = {
 			isa = PBXGroup;
 			children = (
-				9F461FB01E9CD93C00724F67 /* SideMenuConrollers */,
-				976A0EB71E9BB66500FE7BB6 /* Models */,
 				976A0EA01E9B89CB00FE7BB6 /* AppDelegate.h */,
 				976A0EA11E9B89CB00FE7BB6 /* AppDelegate.m */,
-				976A0EA31E9B89CB00FE7BB6 /* ViewController.h */,
-				976A0EA41E9B89CB00FE7BB6 /* ViewController.m */,
+				9F461FD21E9D2DDA00724F67 /* Managers */,
+				9F461FB01E9CD93C00724F67 /* Views */,
+				976A0EB71E9BB66500FE7BB6 /* Models */,
 				976A0EA61E9B89CB00FE7BB6 /* Main.storyboard */,
-				976A0EA91E9B89CB00FE7BB6 /* Assets.xcassets */,
 				976A0EAB1E9B89CB00FE7BB6 /* LaunchScreen.storyboard */,
-				976A0EAE1E9B89CB00FE7BB6 /* Info.plist */,
 				976A0E9D1E9B89CB00FE7BB6 /* Supporting Files */,
 				976A0EB41E9BA94B00FE7BB6 /* keys.plist */,
+				976A0EAE1E9B89CB00FE7BB6 /* Info.plist */,
+				9FC3F3561E9FCCAA0036C62F /* GoogleService-Info.plist */,
+				9F461FC61E9CF11900724F67 /* constant.h */,
+				976A0EA91E9B89CB00FE7BB6 /* Assets.xcassets */,
 			);
 			path = CaptureTerritory;
 			sourceTree = "<group>";
@@ -125,43 +141,54 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
-		9F461FB01E9CD93C00724F67 /* SideMenuConrollers */ = {
+		9F461FB01E9CD93C00724F67 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				9F461FB11E9CD93C00724F67 /* Left View Controller */,
-				9F461FB61E9CD93C00724F67 /* Right View Controller */,
-				9F461FB91E9CD93C00724F67 /* Root View Controllers */,
+				9FC4C3471E9E71D90051C221 /* Cells */,
+				9FC4C3401E9E685A0051C221 /* SWRevealViewController */,
+				9FC4C3441E9E6F9A0051C221 /* LeftSideTableViewController.h */,
+				9FC4C3451E9E6F9A0051C221 /* LeftSideTableViewController.m */,
+				9F461FCF1E9CF74C00724F67 /* LoginViewController.h */,
+				9F461FD01E9CF74C00724F67 /* LoginViewController.m */,
+				976A0EA31E9B89CB00FE7BB6 /* ViewController.h */,
+				976A0EA41E9B89CB00FE7BB6 /* ViewController.m */,
+				9FC4C33D1E9E63C00051C221 /* ProfileViewController.h */,
+				9FC4C33E1E9E63C00051C221 /* ProfileViewController.m */,
 			);
+			name = Views;
 			path = SideMenuConrollers;
 			sourceTree = "<group>";
 		};
-		9F461FB11E9CD93C00724F67 /* Left View Controller */ = {
+		9F461FD21E9D2DDA00724F67 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				9F461FB21E9CD93C00724F67 /* LeftViewCell.h */,
-				9F461FB31E9CD93C00724F67 /* LeftViewCell.m */,
-				9F461FB41E9CD93C00724F67 /* LeftViewController.h */,
-				9F461FB51E9CD93C00724F67 /* LeftViewController.m */,
+				9F461FD31E9D2DF900724F67 /* VKManager.h */,
+				9F461FD41E9D2DF900724F67 /* VKManager.m */,
+				9F5300901E9FB58800D6AE17 /* GPManager.h */,
+				9F5300911E9FB58800D6AE17 /* GPManager.m */,
 			);
-			path = "Left View Controller";
+			name = Managers;
 			sourceTree = "<group>";
 		};
-		9F461FB61E9CD93C00724F67 /* Right View Controller */ = {
+		9FC4C3401E9E685A0051C221 /* SWRevealViewController */ = {
 			isa = PBXGroup;
 			children = (
-				9F461FB71E9CD93C00724F67 /* MainViewController.h */,
-				9F461FB81E9CD93C00724F67 /* MainViewController.m */,
+				9FC4C3411E9E685A0051C221 /* SWRevealViewController.h */,
+				9FC4C3421E9E685A0051C221 /* SWRevealViewController.m */,
 			);
-			path = "Right View Controller";
-			sourceTree = "<group>";
+			name = SWRevealViewController;
+			path = CaptureTerritory/SWRevealViewController;
+			sourceTree = SOURCE_ROOT;
 		};
-		9F461FB91E9CD93C00724F67 /* Root View Controllers */ = {
+		9FC4C3471E9E71D90051C221 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				9F461FBA1E9CD93C00724F67 /* NavigationController.h */,
-				9F461FBB1E9CD93C00724F67 /* NavigationController.m */,
+				9FC4C3481E9E72940051C221 /* LeftViewCell.h */,
+				9FC4C3491E9E72940051C221 /* LeftViewCell.m */,
+				9FC4C34B1E9E87070051C221 /* MainLeftViewCell.h */,
+				9FC4C34C1E9E87070051C221 /* MainLeftViewCell.m */,
 			);
-			path = "Root View Controllers";
+			name = Cells;
 			sourceTree = "<group>";
 		};
 		E279C0EBC44CEDBD64A6A3EF /* Frameworks */ = {
@@ -215,6 +242,7 @@
 				TargetAttributes = {
 					976A0E991E9B89CB00FE7BB6 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = X9J65D7SNF;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -244,6 +272,7 @@
 			files = (
 				976A0EB51E9BA94B00FE7BB6 /* keys.plist in Resources */,
 				976A0EAD1E9B89CB00FE7BB6 /* LaunchScreen.storyboard in Resources */,
+				9FC3F3571E9FCCAA0036C62F /* GoogleService-Info.plist in Resources */,
 				976A0EAA1E9B89CB00FE7BB6 /* Assets.xcassets in Resources */,
 				976A0EA81E9B89CB00FE7BB6 /* Main.storyboard in Resources */,
 			);
@@ -304,15 +333,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FC4C3431E9E685A0051C221 /* SWRevealViewController.m in Sources */,
 				976A0EBA1E9BB67A00FE7BB6 /* PointLoc.m in Sources */,
-				9F461FC01E9CD93C00724F67 /* LeftViewCell.m in Sources */,
 				976A0EA51E9B89CB00FE7BB6 /* ViewController.m in Sources */,
-				9F461FC31E9CD93C00724F67 /* NavigationController.m in Sources */,
-				9F461FC21E9CD93C00724F67 /* MainViewController.m in Sources */,
+				9FC4C33F1E9E63C00051C221 /* ProfileViewController.m in Sources */,
 				976A0EA21E9B89CB00FE7BB6 /* AppDelegate.m in Sources */,
-				9F461FC11E9CD93C00724F67 /* LeftViewController.m in Sources */,
+				9FC4C3461E9E6F9A0051C221 /* LeftSideTableViewController.m in Sources */,
+				9F461FD11E9CF74C00724F67 /* LoginViewController.m in Sources */,
+				9FC4C34D1E9E87070051C221 /* MainLeftViewCell.m in Sources */,
+				9FC4C34A1E9E72940051C221 /* LeftViewCell.m in Sources */,
+				9F461FD51E9D2DF900724F67 /* VKManager.m in Sources */,
 				9FF2A90C1E9BBEF60067D68B /* UserModel.m in Sources */,
 				976A0E9F1E9B89CB00FE7BB6 /* main.m in Sources */,
+				9F5300921E9FB58800D6AE17 /* GPManager.m in Sources */,
 				9771EE101E9CBD4E00236B74 /* GeoPath.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -434,6 +467,7 @@
 			baseConfigurationReference = D7505E049C5554115B4922D0 /* Pods-CaptureTerritory.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = X9J65D7SNF;
 				INFOPLIST_FILE = CaptureTerritory/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SoftGroup.CaptureTerritory;
@@ -446,6 +480,7 @@
 			baseConfigurationReference = E8232620E60218972889B04B /* Pods-CaptureTerritory.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = X9J65D7SNF;
 				INFOPLIST_FILE = CaptureTerritory/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SoftGroup.CaptureTerritory;

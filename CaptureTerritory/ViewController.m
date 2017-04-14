@@ -8,9 +8,9 @@
 
 #import "ViewController.h"
 #import "UserModel.h"
-#import "ViewController.h"
 #import "PointLoc.h"
 #import "GeoPath.h"
+#import "SWRevealViewController.h"
 
 
 @import GoogleMaps;
@@ -30,12 +30,22 @@
 
 @property (strong, nonatomic) UserModel *testUser;
 
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
+
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    SWRevealViewController *revealViewController = self.revealViewController;
+    if ( revealViewController )
+    {
+        [self.sidebarButton setTarget: self.revealViewController];
+        [self.sidebarButton setAction: @selector( revealToggle: )];
+        [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    }
     
     _testUser = [UserModel new];
     [self initLocationManager];
